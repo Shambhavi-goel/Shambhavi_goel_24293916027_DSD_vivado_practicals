@@ -340,7 +340,52 @@ Schematic:
 Simulation:
 ![WhatsApp Image 2025-11-06 at 10 33 02_c3ea71df](https://github.com/user-attachments/assets/d367824f-31d4-4844-baf6-7a3857b799db)
 
+____________________________________________________________________________________________________________________________________________________
+6. 2 to 4 Decoder:
 
+   <h5>Code:</h5>
+   Design source file code:
 
-    
+<pre>`timescale 1ns / 1ps
+module decoder_2to4_using_gates(
+input A,B,
+output D0,D1,D2,D3
+    );
+assign D0= (~A) & (~B);
+assign D1= (~A) & (B);
+assign D2= (A) & (~B); 
+assign D3= A & B;
+endmodule</pre>
+
+Test bench file code:
+<pre>`timescale 1ns / 1ps
+module tb_decoder_2to4_using_gates(
+    );
+reg A,B;
+wire D0,D1,D2,D3;
+decoder_2to4_using_gates uut(A,B,D0,D1,D2,D3);
+initial 
+    begin
+    A=0;  
+    B=0;
+    #10
+    A=0;  
+    B=1;
+    #10
+    A=1;  
+    B=0;
+    #10
+    A=1;  
+    B=1;
+    #10
+  $finish;
+  end
+endmodule</pre>
+
+  Schematic:
+  ![WhatsApp Image 2025-11-06 at 13 14 40_7676f9f0](https://github.com/user-attachments/assets/a4e7d1cb-b855-48d9-a5f8-cfb1397ca741)
+
+  Simulation:
+  ![WhatsApp Image 2025-11-06 at 13 16 04_632e6189](https://github.com/user-attachments/assets/a8c3744c-1a92-49db-935d-36212981c79c)
+
 
