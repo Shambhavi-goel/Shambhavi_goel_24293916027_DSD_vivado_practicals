@@ -29,7 +29,7 @@ assign y7= ~(a ^ b);
 endmodule
 </pre>
 
-   Test bench file code:
+Test bench file code:
 
    
 <pre>`timescale 1ns / 1ps
@@ -66,8 +66,8 @@ ________________________________________________________________________________
 
 2. Boolean Expression:
 
-   <h5>Code:</h5>
-   Design source file code:
+<h5>Code:</h5>
+Design source file code:
 <pre>   `timescale 1ns / 1ps
     module boolean_exp(
     input  A, B, C, D,
@@ -81,7 +81,7 @@ ________________________________________________________________________________
 endmodule</pre>
 
 
-   Test bench file code:
+Test bench file code:
    <pre> `timescale 1ns / 1ps
 module tb_boolean_exp(
     );
@@ -120,8 +120,8 @@ ________________________________________________________________________________
 
 3. Mux 2x1:
 
-   <h5>Code:</h5>
-   Design source file code:
+<h5>Code:</h5>
+Design source file code:
   
 <pre>`timescale 1ns / 1ps
 module mux_2x1_gates(
@@ -162,8 +162,8 @@ ________________________________________________________________________________
 
 4. Mux 4x1:
 
-   <h5>Code:</h5>
-   Design source file code:
+<h5>Code:</h5>
+Design source file code:
 
 <pre>`timescale 1ns / 1ps
 module mux_4x1_gates(
@@ -177,7 +177,7 @@ module mux_4x1_gates(
 endmodule
 </pre>
 
-   Test bench file code:
+Test bench file code:
 
    <pre>`timescale 1ns / 1ps
 module tb_mux_4x1_gates();
@@ -276,8 +276,8 @@ ________________________________________________________________________________
 
 5. 4 to 2 Priority Encoder:
 
-    <h5>Code:</h5>
-   Design source file code:
+<h5>Code:</h5>
+Design source file code:
 
 <pre>`timescale 1ns / 1ps
 module priority_encoder_4to2_using_gates(
@@ -289,7 +289,7 @@ assign B= (D1 & (~D2)) | D3;
 assign V= D0 | D1 | D2 | D3; 
 endmodule</pre>
 
-   Test bench file code:
+Test bench file code:
 <pre>`timescale 1ns / 1ps
 module tb_priority_encoder_4to2_using_gates(
     );
@@ -343,8 +343,8 @@ Simulation:
 ____________________________________________________________________________________________________________________________________________________
 6. 2 to 4 Decoder:
 
-   <h5>Code:</h5>
-   Design source file code:
+<h5>Code:</h5>
+Design source file code:
 
 <pre>`timescale 1ns / 1ps
 module decoder_2to4_using_gates(
@@ -392,8 +392,8 @@ endmodule</pre>
 
   7. Half Adder:
      
-   <h5>Code:</h5>
-   Design source file code:
+<h5>Code:</h5>
+Design source file code:
 
 <pre>`timescale 1ns / 1ps
 module half_adder(
@@ -438,8 +438,8 @@ endmodule</pre>
 
    8. Half Subtractor:
 
-      <h5>Code:</h5>
-   Design source file code:
+<h5>Code:</h5>
+Design source file code:
 <pre>`timescale 1ns / 1ps
 module half_subtractor(
 input A,B,
@@ -481,8 +481,8 @@ endmodule</pre>
    ![WhatsApp Image 2025-11-10 at 14 37 44_5ee9b7bd](https://github.com/user-attachments/assets/fd4d346f-8700-48af-80f0-54e6d4169260)
    ___________________________________________________________________________________________________________________________________________________
    9. Full Adder:
-      <h5>Code:</h5>
-   Design source file code:
+<h5>Code:</h5>
+Design source file code:
 
    <pre>`timescale 1ns / 1ps
 module full_adder(
@@ -529,8 +529,8 @@ endmodule</pre>
    ![WhatsApp Image 2025-11-10 at 14 48 04_845cb2b1](https://github.com/user-attachments/assets/0c4ab133-1653-4379-a29f-508e01313c53)
    _______________________________________________________________________________________________________________________________________________
    10. Full Subtractor:
-       <h5>Code:</h5>
-   Design source file code:
+<h5>Code:</h5>
+Design source file code:
 <pre>`timescale 1ns / 1ps
 module full_subtractor(
 input A,B,C,
