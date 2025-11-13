@@ -7,10 +7,10 @@ ________________________________________________________________________________
 
 1. Logic Gates:
   
-   ##Code:
+   Code:
    Design source file code:
 
-`timescale 1ns / 1ps
+<pre> `timescale 1ns / 1ps
 // Basic gates implementation:  AND, OR, NOT, NAND, NOR, XOR, XNOR
 module logic_gates(
 input a,b,
@@ -27,7 +27,7 @@ assign y5= ~(a | b);
 assign y6= a ^ b;
 assign y7= ~(a ^ b);
 endmodule
-
+</pre>
 
    Test bench file code:
 
