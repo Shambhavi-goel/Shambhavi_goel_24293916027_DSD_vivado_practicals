@@ -116,6 +116,59 @@ endmodule
   Simulation:
   ![WhatsApp Image 2025-11-05 at 22 43 56_0d49f174](https://github.com/user-attachments/assets/3c0a1aba-53a2-4c84-ae47-1957a252c890)
 
+___________________________________________________________________________________________________________________________________________________
+
+3. Mux 2x1:
+
+   <h5>Code:</h5>
+   Design source file code:
+   <pre>`timescale 1ns / 1ps
+
+
+
+module mux_2x1_gates(
+input I0,I1,S,
+output Y
+    );
+    
+
+assign Y= ((~S) & I0) | (S & I1);
+
+endmodule</pre>
+
+Test bench file code:
+<pre>`timescale 1ns / 1ps
+
+module tb_mux_2x1_gates(
+
+    );
+    
+reg I0, I1, S;
+wire Y;
+
+
+mux_2x1 uut(I0, I1, S, Y);
+
+initial begin
+I0 = 0; I1 = 0; S = 0; #10;
+    I0 = 0; I1 = 1; S = 0; #10;
+    I0 = 1; I1 = 0; S = 0; #10;
+    I0 = 1; I1 = 1; S = 0; #10;
+    I0 = 0; I1 = 0; S = 1; #10;
+    I0 = 0; I1 = 1; S = 1; #10;
+    I0 = 1; I1 = 0; S = 1; #10;
+    I0 = 1; I1 = 1; S = 1; #10;
+
+    $finish;
+    end
+endmodule
+</pre>
+
+Schematic:
+![WhatsApp Image 2025-11-06 at 10 01 23_c89adc79](https://github.com/user-attachments/assets/5f41f4fb-b5bb-4d5f-8dce-9bed78fa7ea2)
+
+Simulation:
+![WhatsApp Image 2025-11-06 at 10 03 30_af059585](https://github.com/user-attachments/assets/6c71bbe3-f640-4b2d-9b45-312eb1acedbf)
 
 
 
