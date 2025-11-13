@@ -576,5 +576,51 @@ endmodule</pre>
    Simulation:
    ![WhatsApp Image 2025-11-13 at 23 13 47_90bdeb01](https://github.com/user-attachments/assets/bcbb20b5-049a-4201-97e4-c6361ad7e9fd)
 
+________________________________________________________________________________________________________________________________________
+11. SR Latch:
+<h5>Code:</h5>
+Design source file code:
+<pre>`timescale 1ns / 1ps
+module sr_latch(
+input S,R,
+output Q,Q_bar
+    );
+assign #1 Q= ~(S & Q_bar);
+assign #1 Q_bar= ~(R & Q);
+endmodule</pre>
 
+Test bench file code:
+<pre>`timescale 1ns / 1ps
+module tb_sr_latch(
+    );
+reg S,R;
+wire Q, Q_bar;
+sr_latch uut(S,R,Q,Q_bar);
+initial 
+    begin
+    S=0;  
+    R=1;
+    #10
+    S=1;  
+    R=1;
+    #10
+    S=1;  
+    R=0;
+    #10
+    S=1;  
+    R=1;
+    #10
+    S=0;  
+    R=0;
+    #10
+  $finish;
+  end
+endmodule</pre>
+
+  Schematic:
+  <img width="806" height="409" alt="image" src="https://github.com/user-attachments/assets/e8b05de6-ac70-45cd-8a6a-ec473a37a49f" />
+
+  Simulation:
+  <img width="747" height="420" alt="image" src="https://github.com/user-attachments/assets/1308cfde-628f-4ead-8dfe-ca6064da5ab5" />
+___________________________________________________________________________________________________________________________________________
 
