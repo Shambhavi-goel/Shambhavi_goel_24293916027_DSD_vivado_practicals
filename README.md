@@ -7,7 +7,7 @@ ________________________________________________________________________________
 
 1. Logic Gates:
   
-   Code:
+   <h5>Code:</h5>
    Design source file code:
 
 <pre> `timescale 1ns / 1ps
