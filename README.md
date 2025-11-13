@@ -32,7 +32,7 @@ endmodule
    Test bench file code:
 
    
-`timescale 1ns / 1ps
+<pre>`timescale 1ns / 1ps
 module tb_logic_gates(
     );
 reg a,b;
@@ -54,6 +54,7 @@ b=1;
 $finish;
 end
 endmodule
+</pre>
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
    Schematic:
