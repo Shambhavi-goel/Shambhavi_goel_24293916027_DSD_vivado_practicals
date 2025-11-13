@@ -7,8 +7,8 @@ ________________________________________________________________________________
 
 1. Logic Gates:
   
-   <h5>Code:</h5>
-   Design source file code:
+<h5>Code:</h5>
+Design source file code:
 
 <pre> `timescale 1ns / 1ps
 // Basic gates implementation:  AND, OR, NOT, NAND, NOR, XOR, XNOR
