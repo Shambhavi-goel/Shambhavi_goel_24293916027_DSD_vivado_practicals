@@ -272,6 +272,73 @@ endmodule
 
    Simulation:
    <img width="911" height="503" alt="image" src="https://github.com/user-attachments/assets/807eb2dd-c018-4635-a9d2-8fd767f197ad" />
+___________________________________________________________________________________________________________________________________________________________
+
+5. 4 to 2 Priority Encoder:
+
+    <h5>Code:</h5>
+   Design source file code:
+
+<pre>`timescale 1ns / 1ps
+module priority_encoder_4to2_using_gates(
+input D0,D1,D2,D3,
+output A,B,V
+    );
+assign A= D2 | D3;
+assign B= (D1 & (~D2)) | D3;
+assign V= D0 | D1 | D2 | D3; 
+endmodule</pre>
+
+   Test bench file code:
+<pre>`timescale 1ns / 1ps
+module tb_priority_encoder_4to2_using_gates(
+    );
+reg D0,D1,D2,D3;
+wire A,B,V;
+priority_encoder_4to2_using_gates uut(D0,D1,D2,D3,A,B,V);
+initial 
+    begin
+    D0=0; D1=0;D2=0;D3=0;
+    #10
+    D0=1; D1=0;D2=0;D3=0;
+    #10
+    D0=0; D1=1;D2=0;D3=0;
+    #10
+    D0=0; D1=0;D2=1;D3=0;
+    #10
+    D0=0; D1=0;D2=0;D3=1;
+    #10
+    D0=1; D1=1;D2=0;D3=0;
+    #10
+    D0=1; D1=1;D2=1;D3=0;
+    #10
+    D0=1; D1=1;D2=1;D3=1;
+    #10
+    D0=1; D1=0;D2=1;D3=0;
+    #10    
+    D0=1; D1=0;D2=0;D3=1;
+    #10
+    D0=1; D1=0;D2=1;D3=1;
+    #10
+    D0=0; D1=0;D2=1;D3=1;
+    #10
+    D0=0; D1=1;D2=1;D3=1;
+    #10
+    D0=1; D1=1;D2=0;D3=1;
+    #10
+    D0=0; D1=1;D2=1;D3=0;
+    #10
+    D0=0; D1=1;D2=0;D3=1;
+    #10
+  $finish;
+  end
+endmodule</pre>
+
+Schematic:
+![WhatsApp Image 2025-11-06 at 10 32 04_3bea99d6](https://github.com/user-attachments/assets/bfe12bcc-336a-4cae-95c2-e5d957ed1423)
+
+Simulation:
+![WhatsApp Image 2025-11-06 at 10 33 02_c3ea71df](https://github.com/user-attachments/assets/d367824f-31d4-4844-baf6-7a3857b799db)
 
 
 
