@@ -69,7 +69,7 @@ ________________________________________________________________________________
    <h5>Code:</h5>
    Design source file code:
 
-   <pre>`timescale 1ns / 1ps
+   <pre> `timescale 1ns / 1ps
 module boolean_exp(
 input  A, B, C, D,
 output Y1, Y2, Y3, Y4, Y5
@@ -83,7 +83,7 @@ endmodule
 </pre>
 
    Test bench file code:
-   <pre>`timescale 1ns / 1ps
+   <pre> `timescale 1ns / 1ps
 module tb_boolean_exp(
     );
 reg A,B,C,D;
@@ -111,8 +111,12 @@ end
 endmodule
 </pre>
 
-    Schematic:
-    ![WhatsApp Image 2025-11-05 at 22 33 31_a9eef5c1](https://github.com/user-attachments/assets/5d9e857c-2dc9-4dce-9aab-9e7d4a12408d)
+Schematic:
+![WhatsApp Image 2025-11-05 at 22 33 31_a9eef5c1](https://github.com/user-attachments/assets/3cf1bb2c-076f-439b-8af7-2e4ff7ecbb57)
+Simulation:
+![WhatsApp Image 2025-11-05 at 22 43 56_0d49f174](https://github.com/user-attachments/assets/3c0a1aba-53a2-4c84-ae47-1957a252c890)
+
+
 
 
     
