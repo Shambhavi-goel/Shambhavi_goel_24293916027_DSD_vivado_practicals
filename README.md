@@ -388,4 +388,193 @@ endmodule</pre>
   Simulation:
   ![WhatsApp Image 2025-11-06 at 13 16 04_632e6189](https://github.com/user-attachments/assets/a8c3744c-1a92-49db-935d-36212981c79c)
 
+  _______________________________________________________________________________________________________________________________________________________
+
+  7. Half Adder:
+     
+   <h5>Code:</h5>
+   Design source file code:
+
+<pre>`timescale 1ns / 1ps
+module half_adder(
+input A,B,
+output sum,carry
+    );
+assign sum= A^B;
+assign carry= A&B;
+endmodule</pre>
+
+Test bench file code:
+<pre>`timescale 1ns / 1ps
+module tb_half_adder(
+    );
+reg A,B;
+wire sum,carry;
+half_adder uut(A,B,sum,carry);
+initial 
+    begin
+    A=0;  
+    B=0;
+    #10
+    A=0;  
+    B=1;
+    #10
+    A=1;  
+    B=0;
+    #10
+    A=1;  
+    B=1;
+    #10
+  $finish;
+  end
+endmodule</pre>
+
+   Schematic:
+   ![WhatsApp Image 2025-11-10 at 14 32 22_6b32000f](https://github.com/user-attachments/assets/e9ce97f3-6470-460b-9d4e-f38caee94a0b)
+
+   Simulation:
+   ![WhatsApp Image 2025-11-10 at 14 30 24_439d5fa5](https://github.com/user-attachments/assets/88b346d5-4860-4ae3-8b92-cd08adeb90ea)
+   ____________________________________________________________________________________________________________________________________________________
+
+   8. Half Subtractor:
+
+      <h5>Code:</h5>
+   Design source file code:
+<pre>`timescale 1ns / 1ps
+module half_subtractor(
+input A,B,
+output difference,borrow
+    );
+assign difference= A^B;
+assign borrow= ((~A)&B);
+endmodule</pre>
+
+Test bench file code:
+<pre>`timescale 1ns / 1ps
+module tb_half_subtractor(
+    );
+reg A,B;
+wire difference, borrow;
+half_subtractor uut(A,B,difference, borrow);
+initial 
+    begin
+    A=0;  
+    B=0;
+    #10
+    A=0;  
+    B=1;
+    #10
+    A=1;  
+    B=0;
+    #10
+    A=1;  
+    B=1;
+    #10
+  $finish;
+  end
+endmodule</pre>
+
+   Schematic:
+   ![WhatsApp Image 2025-11-10 at 14 38 46_6bb5e5a9](https://github.com/user-attachments/assets/e4705026-119a-4901-a266-b120ba020071)
+
+   Simulation:
+   ![WhatsApp Image 2025-11-10 at 14 37 44_5ee9b7bd](https://github.com/user-attachments/assets/fd4d346f-8700-48af-80f0-54e6d4169260)
+   ___________________________________________________________________________________________________________________________________________________
+   9. Full Adder:
+      <h5>Code:</h5>
+   Design source file code:
+
+   <pre>`timescale 1ns / 1ps
+module full_adder(
+input A,B,C,
+output sum,carry
+    );
+assign sum= ((A^B)^C);
+assign carry= (A&B) | ((A^B)&C);
+endmodule</pre>
+
+Test bench file code:
+<pre>`timescale 1ns / 1ps
+module tb_full_adder(
+    );
+reg A,B,C;
+wire sum,carry;
+full_adder uut(A,B,C,sum,carry);
+initial 
+    begin
+    A=0;B=0;C=0;
+    #10
+    A=0;B=0;C=1;
+    #10
+    A=0;B=1;C=0;
+    #10
+    A=0;B=1;C=1;
+    #10
+    A=1;B=0;C=0;
+    #10
+    A=1;B=0;C=1;
+    #10
+    A=1;B=1;C=0;
+    #10
+    A=1;B=1;C=1;
+    #10
+  $finish;
+  end
+endmodule</pre>
+
+   Schematic:
+   ![WhatsApp Image 2025-11-10 at 14 49 01_a97ac7f9](https://github.com/user-attachments/assets/4e8241a1-a640-47d9-bc4e-fd4d56e3ce1a)
+
+   Simulation:
+   ![WhatsApp Image 2025-11-10 at 14 48 04_845cb2b1](https://github.com/user-attachments/assets/0c4ab133-1653-4379-a29f-508e01313c53)
+   _______________________________________________________________________________________________________________________________________________
+   10. Full Subtractor:
+       <h5>Code:</h5>
+   Design source file code:
+<pre>`timescale 1ns / 1ps
+module full_subtractor(
+input A,B,C,
+output difference,borrow
+    );
+assign difference = A ^ B ^ C;
+assign borrow = (~A & B) | ((~(A ^ B)) & C);
+endmodule</pre>
+
+Test bench file code:
+<pre>`timescale 1ns / 1ps
+module tb_full_subtractor(
+    );
+reg A,B,C;
+wire difference,borrow;
+full_subtractor uut(A,B,C,difference,borrow);
+initial 
+    begin
+    A=0;B=0;C=0;
+    #10
+    A=0;B=0;C=1;
+    #10
+    A=0;B=1;C=0;
+    #10
+    A=0;B=1;C=1;
+    #10
+    A=1;B=0;C=0;
+    #10
+    A=1;B=0;C=1;
+    #10
+    A=1;B=1;C=0;
+    #10
+    A=1;B=1;C=1;
+    #10
+  $finish;
+  end
+endmodule</pre>
+
+
+   Schematic:
+   ![WhatsApp Image 2025-11-13 at 23 12 27_7036be44](https://github.com/user-attachments/assets/5de0ae88-c19d-4417-b748-aa83bb97c204)
+
+   Simulation:
+   ![WhatsApp Image 2025-11-13 at 23 13 47_90bdeb01](https://github.com/user-attachments/assets/bcbb20b5-049a-4201-97e4-c6361ad7e9fd)
+
+
 
