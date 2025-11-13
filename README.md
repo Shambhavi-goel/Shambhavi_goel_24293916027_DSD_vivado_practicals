@@ -79,8 +79,7 @@ output Y1, Y2, Y3, Y4, Y5
   assign Y3 = (A & B) | (B & C) | (A & C);
   assign Y4 = (A & (~B | C)) ^ (D & (B | ~C));
   assign Y5 = ~((A | B) ^ (C & ~D));
-endmodule
-</pre>
+endmodule</pre>
 
    Test bench file code:
    <pre> `timescale 1ns / 1ps
@@ -111,10 +110,10 @@ end
 endmodule
 </pre>
 
-Schematic:
-![WhatsApp Image 2025-11-05 at 22 33 31_a9eef5c1](https://github.com/user-attachments/assets/3cf1bb2c-076f-439b-8af7-2e4ff7ecbb57)
-Simulation:
-![WhatsApp Image 2025-11-05 at 22 43 56_0d49f174](https://github.com/user-attachments/assets/3c0a1aba-53a2-4c84-ae47-1957a252c890)
+  Schematic:
+  ![WhatsApp Image 2025-11-05 at 22 33 31_a9eef5c1](https://github.com/user-attachments/assets/3cf1bb2c-076f-439b-8af7-2e4ff7ecbb57)
+  Simulation:
+  ![WhatsApp Image 2025-11-05 at 22 43 56_0d49f174](https://github.com/user-attachments/assets/3c0a1aba-53a2-4c84-ae47-1957a252c890)
 
 
 
