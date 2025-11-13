@@ -64,13 +64,13 @@ endmodule
 
 ____________________________________________________________________________________________________________________________________________________________
 
-3. Boolean Expression:
+2. Boolean Expression:
 
    <h5>Code:</h5>
    Design source file code:
 
-   <pre> `timescale 1ns / 1ps
-module boolean_exp(
+   <pre>`timescale 1ns / 1ps
+    module boolean_exp(
 input  A, B, C, D,
 output Y1, Y2, Y3, Y4, Y5
     );
