@@ -675,7 +675,7 @@ Schematic:
 Simulation:
 ![WhatsApp Image 2025-11-14 at 13 51 47_2b56409f](https://github.com/user-attachments/assets/3a11b556-6f04-4a43-bdb7-2770bb8e31c1)
 ____________________________________________________________________________________________________________________________________
-13. D FF:
+13. D Flip Flop:
 <h5>Code:</h5>
 Design source file code:
 <pre>`timescale 1ns / 1ps
