@@ -63,11 +63,12 @@ endmodule
 
 ________________________________________________________________________________________________________________________________________
 
-2. Boolean Expression:
+<h4>2. Boolean Expression:</h4>
 
 <h5>Code:</h5>
-Design source file code:
-<pre>   `timescale 1ns / 1ps
+<h5>Design source file code:</h5>
+
+<pre>`timescale 1ns / 1ps
     module boolean_exp(
     input  A, B, C, D,
     output Y1, Y2, Y3, Y4, Y5
@@ -79,9 +80,9 @@ Design source file code:
   assign Y5 = ~((A | B) ^ (C & ~D));                // Y5= ((A+B)⊕(C⋅D'))'​  
 endmodule</pre>
 
+<h5>Test bench file code:</h5>
 
-Test bench file code:
-   <pre> `timescale 1ns / 1ps
+<pre>`timescale 1ns / 1ps
 module tb_boolean_exp(
     );
 reg A,B,C,D;
@@ -109,18 +110,18 @@ end
 endmodule
 </pre>
 
-  Schematic:
+  <h5>Schematic:</h5>
   ![WhatsApp Image 2025-11-05 at 22 33 31_a9eef5c1](https://github.com/user-attachments/assets/3cf1bb2c-076f-439b-8af7-2e4ff7ecbb57)
   
-  Simulation:
+  <h5>Simulation:</h5>
   ![WhatsApp Image 2025-11-05 at 22 43 56_0d49f174](https://github.com/user-attachments/assets/3c0a1aba-53a2-4c84-ae47-1957a252c890)
 
 ________________________________________________________________________________________________________________________________________
 
-3. Mux 2x1:
+<h4>3. Mux 2x1:</h4>
 
 <h5>Code:</h5>
-Design source file code:
+<h5>Design source file code:</h5>
   
 <pre>`timescale 1ns / 1ps
 module mux_2x1_gates(
@@ -130,7 +131,8 @@ output Y
 assign Y= ((~S) & I0) | (S & I1);
 endmodule</pre>
 
-Test bench file code:
+<h5>Test bench file code:</h5>
+
 <pre>`timescale 1ns / 1ps
 module tb_mux_2x1_gates(
     );
@@ -151,18 +153,18 @@ I0 = 0; I1 = 0; S = 0; #10;
 endmodule
 </pre>
 
-Schematic:
+<h5>Schematic:</h5>
 ![WhatsApp Image 2025-11-06 at 10 01 23_c89adc79](https://github.com/user-attachments/assets/5f41f4fb-b5bb-4d5f-8dce-9bed78fa7ea2)
 
-Simulation:
+<h5>Simulation:</h5>
 ![WhatsApp Image 2025-11-06 at 10 03 30_af059585](https://github.com/user-attachments/assets/6c71bbe3-f640-4b2d-9b45-312eb1acedbf)
 
 ________________________________________________________________________________________________________________________________________
 
-4. Mux 4x1:
+<h4>4. Mux 4x1:</h4>
 
 <h5>Code:</h5>
-Design source file code:
+<h5>Design source file code:</h5>
 
 <pre>`timescale 1ns / 1ps
 module mux_4x1_gates(
@@ -176,9 +178,9 @@ module mux_4x1_gates(
 endmodule
 </pre>
 
-Test bench file code:
+<h5>Test bench file code:</h5>
 
-   <pre>`timescale 1ns / 1ps
+<pre>`timescale 1ns / 1ps
 module tb_mux_4x1_gates();
 reg I0, I1, I2, I3, S0, S1;
 wire Y;
@@ -266,16 +268,17 @@ end
 endmodule
 </pre>
 
-   Schematic:
-   <img width="894" height="482" alt="image" src="https://github.com/user-attachments/assets/b675e6eb-4cec-4e30-a3b4-bd3f9901d764" />
+<h5>Schematic:</h5>
+<img width="894" height="482" alt="image" src="https://github.com/user-attachments/assets/b675e6eb-4cec-4e30-a3b4-bd3f9901d764" />
 
-   Simulation:
-   <img width="911" height="503" alt="image" src="https://github.com/user-attachments/assets/807eb2dd-c018-4635-a9d2-8fd767f197ad" />
+<h5>Simulation:</h5>
+<img width="911" height="503" alt="image" src="https://github.com/user-attachments/assets/807eb2dd-c018-4635-a9d2-8fd767f197ad" />
 ________________________________________________________________________________________________________________________________________
-5. Mux 8x1:
+<h4>5. Mux 8x1:</h4>
 
 <h5>Code:</h5>
-Design source file code:
+<h5>Design source file code:</h5>
+
 <pre>`timescale 1ns / 1ps
 module mux_8x1_gates(
     input I0, I1, I2, I3, I4, I5, I6, I7, S0, S1, S2,
@@ -292,7 +295,8 @@ module mux_8x1_gates(
 endmodule
 </pre>
 
-Test bench file code:
+<h5>Test bench file code:</h5>
+
 <pre>`timescale 1ns / 1ps
 module tb_mux_8x1_gates();
 reg I0, I1, I2, I3, I4, I5, I6, I7, S0, S1, S2;
@@ -337,10 +341,10 @@ end
 endmodule
 </pre>
 
-Schematic:
+<h5>Schematic:</h5>
 ![WhatsApp Image 2025-11-17 at 13 37 41_03d2c530](https://github.com/user-attachments/assets/24994a77-3c55-48db-92bf-b0f5633efc9c)
 
-Simulation:
+<h5>Simulation:</h5>
 ![WhatsApp Image 2025-11-17 at 13 36 02_135c6ba0](https://github.com/user-attachments/assets/f2f6f236-5114-4dab-a095-0a3a22003703)
 
 
