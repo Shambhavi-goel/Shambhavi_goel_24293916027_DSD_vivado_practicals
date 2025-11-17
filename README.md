@@ -273,8 +273,80 @@ endmodule
    Simulation:
    <img width="911" height="503" alt="image" src="https://github.com/user-attachments/assets/807eb2dd-c018-4635-a9d2-8fd767f197ad" />
 ________________________________________________________________________________________________________________________________________
+5. Mux 8x1:
 
-5. 4 to 2 Priority Encoder:
+<h5>Code:</h5>
+Design source file code:
+<pre>`timescale 1ns / 1ps
+module mux_8x1_gates(
+    input I0, I1, I2, I3, I4, I5, I6, I7, S0, S1, S2,
+    output Y
+    );
+  assign Y = (~S2 & ~S1 & ~S0 & I0) |
+           (~S2 & ~S1 &  S0 & I1) |
+           (~S2 &  S1 & ~S0 & I2) |
+           (~S2 &  S1 &  S0 & I3) |
+           ( S2 & ~S1 & ~S0 & I4) |
+           ( S2 & ~S1 &  S0 & I5) |
+           ( S2 &  S1 & ~S0 & I6) |
+           ( S2 &  S1 &  S0 & I7);
+endmodule
+</pre>
+
+Test bench file code:
+<pre>`timescale 1ns / 1ps
+module tb_mux_8x1_gates();
+reg I0, I1, I2, I3, I4, I5, I6, I7, S0, S1, S2;
+wire Y;
+mux_8x1_gates uut(I0, I1, I2, I3, I4, I5, I6, I7, S0, S1, S2, Y);
+initial begin
+
+// Test case 1: Select I0
+S2=0; S1=0; S0=0;
+I0=1; I1=0; I2=0; I3=0; I4=0; I5=0; I6=0; I7=0; #10;
+
+// Test case 2: Select I1
+S2=0; S1=0; S0=1;
+I0=0; I1=1; I2=0; I3=0; I4=0; I5=0; I6=0; I7=0; #10;
+
+// Test case 3: Select I2
+S2=0; S1=1; S0=0;
+I0=0; I1=0; I2=1; I3=0; I4=0; I5=0; I6=0; I7=0; #10;
+
+// Test case 4: Select I3
+S2=0; S1=1; S0=1;
+I0=0; I1=0; I2=0; I3=1; I4=0; I5=0; I6=0; I7=0; #10;
+
+// Test case 5: Select I4
+S2=1; S1=0; S0=0;
+I0=0; I1=0; I2=0; I3=0; I4=1; I5=0; I6=0; I7=0; #10;
+
+// Test case 6: Select I5
+S2=1; S1=0; S0=1;
+I0=0; I1=0; I2=0; I3=0; I4=0; I5=1; I6=0; I7=0; #10;
+
+// Test case 7: Select I6
+S2=1; S1=1; S0=0;
+I0=0; I1=0; I2=0; I3=0; I4=0; I5=0; I6=1; I7=0; #10;
+
+// Test case 8: Select I7
+S2=1; S1=1; S0=1;
+I0=0; I1=0; I2=0; I3=0; I4=0; I5=0; I6=0; I7=1; #10;
+
+    $finish;
+end
+endmodule
+</pre>
+
+Schematic:
+![WhatsApp Image 2025-11-17 at 13 37 41_03d2c530](https://github.com/user-attachments/assets/24994a77-3c55-48db-92bf-b0f5633efc9c)
+
+Simulation:
+![WhatsApp Image 2025-11-17 at 13 36 02_135c6ba0](https://github.com/user-attachments/assets/f2f6f236-5114-4dab-a095-0a3a22003703)
+
+
+________________________________________________________________________________________________________________________________________
+6. 4 to 2 Priority Encoder:
 
 <h5>Code:</h5>
 Design source file code:
@@ -341,7 +413,7 @@ Simulation:
 ![WhatsApp Image 2025-11-06 at 10 33 02_c3ea71df](https://github.com/user-attachments/assets/d367824f-31d4-4844-baf6-7a3857b799db)
 
 ________________________________________________________________________________________________________________________________________
-6. 2 to 4 Decoder:
+7. 2 to 4 Decoder:
 
 <h5>Code:</h5>
 Design source file code:
@@ -390,7 +462,7 @@ endmodule</pre>
 
   ________________________________________________________________________________________________________________________________________
 
-  7. Half Adder:
+  8. Half Adder:
      
 <h5>Code:</h5>
 Design source file code:
@@ -436,7 +508,7 @@ endmodule</pre>
    ![WhatsApp Image 2025-11-10 at 14 30 24_439d5fa5](https://github.com/user-attachments/assets/88b346d5-4860-4ae3-8b92-cd08adeb90ea)
    ________________________________________________________________________________________________________________________________________
 
-   8. Half Subtractor:
+   9. Half Subtractor:
 
 <h5>Code:</h5>
 Design source file code:
@@ -481,7 +553,7 @@ endmodule</pre>
    ![WhatsApp Image 2025-11-10 at 14 37 44_5ee9b7bd](https://github.com/user-attachments/assets/fd4d346f-8700-48af-80f0-54e6d4169260)
    ________________________________________________________________________________________________________________________________________
    
-   9. Full Adder:
+   10. Full Adder:
 <h5>Code:</h5>
 Design source file code:
 
@@ -530,7 +602,7 @@ endmodule</pre>
    ![WhatsApp Image 2025-11-10 at 14 48 04_845cb2b1](https://github.com/user-attachments/assets/0c4ab133-1653-4379-a29f-508e01313c53)
    _______________________________________________________________________________________________________________________________________
    
-   10. Full Subtractor:
+   11. Full Subtractor:
 <h5>Code:</h5>
 Design source file code:
 <pre>`timescale 1ns / 1ps
@@ -580,7 +652,7 @@ endmodule</pre>
 
 ________________________________________________________________________________________________________________________________________
 
-11. SR Latch:
+12. SR Latch:
 <h5>Code:</h5>
 Design source file code:
 <pre>`timescale 1ns / 1ps
@@ -627,7 +699,7 @@ endmodule</pre>
   <img width="747" height="420" alt="image" src="https://github.com/user-attachments/assets/1308cfde-628f-4ead-8dfe-ca6064da5ab5" />
 ________________________________________________________________________________________________________________________________________
 
-12. SR Flip Flop:
+13. SR Flip Flop:
 <h5>Code:</h5>
 Design source file code:
 <pre>`timescale 1ns / 1ps
@@ -675,7 +747,7 @@ Schematic:
 Simulation:
 ![WhatsApp Image 2025-11-14 at 13 51 47_2b56409f](https://github.com/user-attachments/assets/3a11b556-6f04-4a43-bdb7-2770bb8e31c1)
 ____________________________________________________________________________________________________________________________________
-13. D Flip Flop:
+14. D Flip Flop:
 <h5>Code:</h5>
 Design source file code:
 <pre>`timescale 1ns / 1ps
