@@ -675,5 +675,51 @@ Schematic:
 Simulation:
 ![WhatsApp Image 2025-11-14 at 13 51 47_2b56409f](https://github.com/user-attachments/assets/3a11b556-6f04-4a43-bdb7-2770bb8e31c1)
 ____________________________________________________________________________________________________________________________________
+13. D FF:
+<h5>Code:</h5>
+Design source file code:
+<pre>`timescale 1ns / 1ps
+module d_ff(
+    input D,clk,
+    wire D_bar,sg, rg,
+    output q, q_bar
+    );
+    assign D_bar= ~D;
+    assign #1 sg = ~(D&clk);
+    assign #1 rg = ~(D_bar&clk);
+  assign q_bar = ~(q&rg);
+  assign q = ~(q_bar&sg);
+endmodule</pre>
+
+Test bench file code:
+<pre>`timescale 1ns / 1ps
+module tb_d_ff(
+    );
+    reg D,clk;
+    wire q, q_bar;
+d_ff uut (
+     .D(D),
+     .clk(clk),
+    .q(q),
+    .q_bar(q_bar)
+);
+    initial begin
+    clk=0;
+    forever #5 
+    clk = ~clk;
+    end
+    initial begin 
+    D = 0; #10;
+    D = 1; #10;
+    $finish;
+end 
+endmodule</pre>
+
+Schematic:
+<img width="1004" height="419" alt="image" src="https://github.com/user-attachments/assets/0db7b1be-8f01-4135-b976-2a518a8773af" />
+
+Simulation:
+![WhatsApp Image 2025-11-17 at 10 29 31_48d1d7c2](https://github.com/user-attachments/assets/a229e43e-92ee-44ca-8936-c08e422e36c5)
+________________________________________________________________________________________________________________________________________________
 
 
