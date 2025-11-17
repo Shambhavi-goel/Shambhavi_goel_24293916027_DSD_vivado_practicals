@@ -5,10 +5,10 @@ SHAMBHAVI GOEL,
 The following are the practicals performed in Verilog:
 ________________________________________________________________________________________________________________________________________
 
-1. Logic Gates:
+</h4>1. Logic Gates:</h4>
   
 <h5>Code:</h5>
-Design source file code:
+<h5>Design source file code:</h5>
 
 <pre> `timescale 1ns / 1ps
 // Basic gates implementation:  AND, OR, NOT, NAND, NOR, XOR, XNOR
@@ -29,9 +29,8 @@ assign y7= ~(a ^ b);
 endmodule
 </pre>
 
-Test bench file code:
+<h5>Test bench file code:</h5>
 
-   
 <pre>`timescale 1ns / 1ps
 module tb_logic_gates(
     );
@@ -56,10 +55,10 @@ end
 endmodule
 </pre>
 
-   Schematic:
+   <h5>Schematic:</h5>
    ![WhatsApp Image 2025-11-05 at 22 16 40_15c374ae](https://github.com/user-attachments/assets/aba98752-ebae-4638-b0bb-13a74cea4ea8)
    
-   Simulation:
+   <h5>Simulation:</h5>
    ![WhatsApp Image 2025-11-05 at 22 18 11_5cee90ea](https://github.com/user-attachments/assets/ca707868-399f-4338-87ce-36d6706c9b64)
 
 ________________________________________________________________________________________________________________________________________
