@@ -349,10 +349,10 @@ endmodule
 
 
 ________________________________________________________________________________________________________________________________________
-6. 4 to 2 Priority Encoder:
+<h4>6. 4 to 2 Priority Encoder:</h4>
 
 <h5>Code:</h5>
-Design source file code:
+<h5>Design source file code:</h5>
 
 <pre>`timescale 1ns / 1ps
 module priority_encoder_4to2_using_gates(
@@ -364,7 +364,8 @@ assign B= (D1 & (~D2)) | D3;
 assign V= D0 | D1 | D2 | D3; 
 endmodule</pre>
 
-Test bench file code:
+<h5>Test bench file code:</h5>
+
 <pre>`timescale 1ns / 1ps
 module tb_priority_encoder_4to2_using_gates(
     );
@@ -409,17 +410,17 @@ initial
   end
 endmodule</pre>
 
-Schematic:
+<h5>Schematic:</h5>
 ![WhatsApp Image 2025-11-06 at 10 32 04_3bea99d6](https://github.com/user-attachments/assets/bfe12bcc-336a-4cae-95c2-e5d957ed1423)
 
-Simulation:
+<h5>Simulation:</h5>
 ![WhatsApp Image 2025-11-06 at 10 33 02_c3ea71df](https://github.com/user-attachments/assets/d367824f-31d4-4844-baf6-7a3857b799db)
 
 ________________________________________________________________________________________________________________________________________
-7. 2 to 4 Decoder:
+<h4>7. 2 to 4 Decoder:</h4>
 
 <h5>Code:</h5>
-Design source file code:
+<h5>Design source file code:</h5>
 
 <pre>`timescale 1ns / 1ps
 module decoder_2to4_using_gates(
@@ -432,7 +433,8 @@ assign D2= (A) & (~B);
 assign D3= A & B;
 endmodule</pre>
 
-Test bench file code:
+<h5>Test bench file code:</h5>
+
 <pre>`timescale 1ns / 1ps
 module tb_decoder_2to4_using_gates(
     );
@@ -457,18 +459,18 @@ initial
   end
 endmodule</pre>
 
-  Schematic:
+  <h5>Schematic:</h5>
   ![WhatsApp Image 2025-11-06 at 13 14 40_7676f9f0](https://github.com/user-attachments/assets/a4e7d1cb-b855-48d9-a5f8-cfb1397ca741)
 
-  Simulation:
+  <h5>Simulation:</h5>
   ![WhatsApp Image 2025-11-06 at 13 16 04_632e6189](https://github.com/user-attachments/assets/a8c3744c-1a92-49db-935d-36212981c79c)
 
-  ________________________________________________________________________________________________________________________________________
+ ________________________________________________________________________________________________________________________________________
 
-  8. Half Adder:
+<h4>8. Half Adder:</h4>
      
 <h5>Code:</h5>
-Design source file code:
+<h5>Design source file code:</h5>
 
 <pre>`timescale 1ns / 1ps
 module half_adder(
@@ -479,7 +481,8 @@ assign sum= A^B;
 assign carry= A&B;
 endmodule</pre>
 
-Test bench file code:
+<h5>Test bench file code:</h5>
+
 <pre>`timescale 1ns / 1ps
 module tb_half_adder(
     );
@@ -504,17 +507,18 @@ initial
   end
 endmodule</pre>
 
-   Schematic:
-   ![WhatsApp Image 2025-11-10 at 14 32 22_6b32000f](https://github.com/user-attachments/assets/e9ce97f3-6470-460b-9d4e-f38caee94a0b)
+<h5>Schematic:</h5>
+![WhatsApp Image 2025-11-10 at 14 32 22_6b32000f](https://github.com/user-attachments/assets/e9ce97f3-6470-460b-9d4e-f38caee94a0b)
 
-   Simulation:
-   ![WhatsApp Image 2025-11-10 at 14 30 24_439d5fa5](https://github.com/user-attachments/assets/88b346d5-4860-4ae3-8b92-cd08adeb90ea)
-   ________________________________________________________________________________________________________________________________________
+<h5>Simulation:</h5>
+![WhatsApp Image 2025-11-10 at 14 30 24_439d5fa5](https://github.com/user-attachments/assets/88b346d5-4860-4ae3-8b92-cd08adeb90ea)
+________________________________________________________________________________________________________________________________________
 
-   9. Half Subtractor:
+<h4>9. Half Subtractor:</h4>
 
 <h5>Code:</h5>
-Design source file code:
+<h5>Design source file code:</h5>
+
 <pre>`timescale 1ns / 1ps
 module half_subtractor(
 input A,B,
@@ -524,7 +528,8 @@ assign difference= A^B;
 assign borrow= ((~A)&B);
 endmodule</pre>
 
-Test bench file code:
+<h5>Test bench file code:</h5>
+
 <pre>`timescale 1ns / 1ps
 module tb_half_subtractor(
     );
@@ -549,18 +554,19 @@ initial
   end
 endmodule</pre>
 
-   Schematic:
-   ![WhatsApp Image 2025-11-10 at 14 38 46_6bb5e5a9](https://github.com/user-attachments/assets/e4705026-119a-4901-a266-b120ba020071)
+<h5>Schematic:</h5>
+![WhatsApp Image 2025-11-10 at 14 38 46_6bb5e5a9](https://github.com/user-attachments/assets/e4705026-119a-4901-a266-b120ba020071)
 
-   Simulation:
-   ![WhatsApp Image 2025-11-10 at 14 37 44_5ee9b7bd](https://github.com/user-attachments/assets/fd4d346f-8700-48af-80f0-54e6d4169260)
-   ________________________________________________________________________________________________________________________________________
+<h5>Simulation:</h5>
+![WhatsApp Image 2025-11-10 at 14 37 44_5ee9b7bd](https://github.com/user-attachments/assets/fd4d346f-8700-48af-80f0-54e6d4169260)
+________________________________________________________________________________________________________________________________________
    
-   10. Full Adder:
-<h5>Code:</h5>
-Design source file code:
+<h4>10. Full Adder:</h4>
 
-   <pre>`timescale 1ns / 1ps
+<h5>Code:</h5>
+<h5>Design source file code:</h5>
+
+<pre>`timescale 1ns / 1ps
 module full_adder(
 input A,B,C,
 output sum,carry
@@ -569,7 +575,8 @@ assign sum= ((A^B)^C);
 assign carry= (A&B) | ((A^B)&C);
 endmodule</pre>
 
-Test bench file code:
+<h5>Test bench file code:</h5>
+
 <pre>`timescale 1ns / 1ps
 module tb_full_adder(
     );
@@ -598,16 +605,18 @@ initial
   end
 endmodule</pre>
 
-   Schematic:
-   ![WhatsApp Image 2025-11-10 at 14 49 01_a97ac7f9](https://github.com/user-attachments/assets/4e8241a1-a640-47d9-bc4e-fd4d56e3ce1a)
+<h5>Schematic:</h5>
+![WhatsApp Image 2025-11-10 at 14 49 01_a97ac7f9](https://github.com/user-attachments/assets/4e8241a1-a640-47d9-bc4e-fd4d56e3ce1a)
 
-   Simulation:
-   ![WhatsApp Image 2025-11-10 at 14 48 04_845cb2b1](https://github.com/user-attachments/assets/0c4ab133-1653-4379-a29f-508e01313c53)
-   _______________________________________________________________________________________________________________________________________
+<h5>Simulation:</h5>
+![WhatsApp Image 2025-11-10 at 14 48 04_845cb2b1](https://github.com/user-attachments/assets/0c4ab133-1653-4379-a29f-508e01313c53)
+_______________________________________________________________________________________________________________________________________
    
-   11. Full Subtractor:
+<h4>11. Full Subtractor:</h4>
+
 <h5>Code:</h5>
-Design source file code:
+<h5>Design source file code:</h5>
+
 <pre>`timescale 1ns / 1ps
 module full_subtractor(
 input A,B,C,
@@ -617,7 +626,8 @@ assign difference = A ^ B ^ C;
 assign borrow = (~A & B) | ((~(A ^ B)) & C);
 endmodule</pre>
 
-Test bench file code:
+<h5>Test bench file code:</h5>
+
 <pre>`timescale 1ns / 1ps
 module tb_full_subtractor(
     );
@@ -646,34 +656,122 @@ initial
   end
 endmodule</pre>
 
+<h5>Schematic:</h5>
+![WhatsApp Image 2025-11-13 at 23 12 27_7036be44](https://github.com/user-attachments/assets/5de0ae88-c19d-4417-b748-aa83bb97c204)
 
-   Schematic:
-   ![WhatsApp Image 2025-11-13 at 23 12 27_7036be44](https://github.com/user-attachments/assets/5de0ae88-c19d-4417-b748-aa83bb97c204)
-
-   Simulation:
-   ![WhatsApp Image 2025-11-13 at 23 13 47_90bdeb01](https://github.com/user-attachments/assets/bcbb20b5-049a-4201-97e4-c6361ad7e9fd)
-
+<h5>Simulation:</h5>
+![WhatsApp Image 2025-11-13 at 23 13 47_90bdeb01](https://github.com/user-attachments/assets/bcbb20b5-049a-4201-97e4-c6361ad7e9fd)
 ________________________________________________________________________________________________________________________________________
+<h4>12. Universal Adder / Subtractor with Overflow Check:</h4>
 
-12. SR Latch:
 <h5>Code:</h5>
-Design source file code:
+<h5>Design source file code:</h5>
+
 <pre>`timescale 1ns / 1ps
+
+
+module universal_adder_subtractor(
+input A0, A1, A2, A3, B0, B1, B2, B3, M,
+output C4, S0, S1, S2, S3,V
+    );
+    assign C0= M;
+    assign S0= A0 ^ (B0 ^ M) ^ C0;
+    assign C1= (A0 & (B0 ^ M)) | (C0 & (A0 ^ (B0 ^ M)));
+    
+    assign S1= A1 ^ (B1 ^ M) ^ C1;
+    assign C2= (A1 & (B1 ^ M)) | (C1 & (A1 ^ (B1 ^ M)));
+    
+    assign S2= A2 ^ (B2 ^ M) ^ C2;
+    assign C3= (A2 & (B2 ^ M)) | (C2 & (A2 ^ (B2 ^ M)));
+    
+    assign S3= A3 ^ (B3 ^ M) ^ C3;
+    assign C4= (A3 & (B3 ^ M)) | (C3 & (A3 ^ (B3 ^ M)));
+    
+    assign V= C3 ^ C4;
+endmodule
+</pre>
+
+<h5>Test bench file code:</h5>
+
+<pre>`timescale 1ns / 1ps
+
+
+module tb_universal_adder_subtractor(
+
+    );
+reg A0, A1, A2, A3, B0, B1, B2, B3, M;
+wire C4, S0, S1, S2, S3,V;
+
+universal_adder_subtractor uut(A0, A1, A2, A3, B0, B1, B2, B3, M,C4, S0, S1, S2, S3,V);
+
+initial begin
+// ADD: 9 and 10 [1001 + 1010]
+A3=1; A2=0; A1=0; A0=1; 
+B3=1; B2=0; B1=1; B0=0; 
+M=0;
+#10
+
+// SUBTRACT: 10 from 9 [1001- 1010]
+A3=1; A2=0; A1=0; A0=1; 
+B3=1; B2=0; B1=1; B0=0; 
+M=1;
+#10
+$finish;
+
+end
+endmodule
+</pre>
+
+<h5>Schematic:</h5>
+![WhatsApp Image 2025-11-18 at 23 01 01_68606018](https://github.com/user-attachments/assets/67e5fb1a-c9f5-4957-bf57-3e625fbfe480)
+
+<h5>Simulation:</h5>
+![WhatsApp Image 2025-11-18 at 22 59 38_9d1d4967](https://github.com/user-attachments/assets/9814d178-a66b-4111-b4ab-2434a2fd91e4)
+________________________________________________________________________________________________________________________________________
+<h4>13. SR Latch:</h4>
+
+<h5>Code:</h5>
+<h5>Design source file code:</h5>
+
+<pre>`timescale 1ns / 1ps
+
+
+
 module sr_latch(
 input S,R,
-output Q,Q_bar
+output reg Q,Qbar
     );
-assign #1 Q= ~(S & Q_bar);
-assign #1 Q_bar= ~(R & Q);
+    
+
+always @(*) begin 
+if (S == 0 && R == 0) begin 
+$display("Invalid SR Inputs at Time %0t", $time); 
+Q = 1'bx; 
+Qbar = 1'bx; 
+end 
+else begin 
+Q <= ~(S & Qbar); 
+Qbar <= ~(R & Q); 
+end 
+end
+
+
 endmodule</pre>
 
-Test bench file code:
+<h5>Test bench file code:</h5>
+
 <pre>`timescale 1ns / 1ps
+
 module tb_sr_latch(
+
     );
+    
 reg S,R;
-wire Q, Q_bar;
-sr_latch uut(S,R,Q,Q_bar);
+wire Q, Qbar;
+
+
+sr_latch uut(S,R,Q,Qbar);
+
 initial 
     begin
     S=0;  
@@ -693,108 +791,268 @@ initial
     #10
   $finish;
   end
+
 endmodule</pre>
 
-  Schematic:
-  <img width="806" height="409" alt="image" src="https://github.com/user-attachments/assets/e8b05de6-ac70-45cd-8a6a-ec473a37a49f" />
+<h5>Schematic:</h5>
+![WhatsApp Image 2025-11-19 at 00 04 35_c0ca73f1](https://github.com/user-attachments/assets/515060f1-6b55-4c91-93cb-909382a5c466)
 
-  Simulation:
-  <img width="747" height="420" alt="image" src="https://github.com/user-attachments/assets/1308cfde-628f-4ead-8dfe-ca6064da5ab5" />
+<h5>Simulation:</h5>
+![WhatsApp Image 2025-11-19 at 00 03 12_cd90a7e0](https://github.com/user-attachments/assets/bded6930-4550-4849-95d1-8dbbaf1a8f2a)
 ________________________________________________________________________________________________________________________________________
+<h4>14. SR Flip Flop:</h4>
 
-13. SR Flip Flop:
 <h5>Code:</h5>
-Design source file code:
-<pre>`timescale 1ns / 1ps
-module sr_ff(
-    input S,R,clk,
-    wire sg, rg,
-    output q, q_bar
-    );
-    assign #1 sg = ~(S&clk);
-    assign #1 rg = ~(R&clk);
-    assign q_bar = ~(q&rg);
-    assign q = ~(q_bar&sg);
+<h5>Design source file code:</h5>
+
+<pre>`timescale 1ns / 1ps 
+
+//Positive edge triggered SR Flip Flop
+
+module sr_ff( 
+input  S, R, CLK, 
+output reg Q, 
+output Qbar 
+); 
+
+
+assign Qbar = ~Q;
+
+always @(posedge CLK) begin
+     case ({S, R}) 
+     2'b10: Q <= 1'b1;   // Set 
+     2'b01: Q <= 1'b0;   // Reset 
+     2'b00: Q <= Q;      // Hold (no change) 
+     2'b11: Q <= 1'bx;   // Invalid condition 
+endcase
+end
+
+
 endmodule</pre>
 
-Test bench file code:
-<pre>`timescale 1ns / 1ps
-module tb_sr_ff(
-    );
-    reg S,R,clk;
-    wire q, q_bar;
-sr_ff uut (
-     .clk(clk),
-    .S(S),
-    .R(R),
-    .q(q),
-    .q_bar(q_bar)
-);
-    initial begin
-    clk=0;
-    forever #5 
-    clk = ~clk;
-    end  
-    initial begin 
-    S = 0; R = 0; #10;
-    S = 0; R = 1; #10;
-    S = 1; R = 0; #10;
-    S = 1; R = 1; #10;
-    $finish;
+<h5>Test bench file code:</h5>
+
+<pre>`timescale 1ns / 1ps 
+
+module tb_sr_ff( 
+); 
+reg S, R, CLK; 
+wire Q, Qbar; 
+
+sr_ff uut (S,R,CLK,Q,Qbar); 
+
+initial begin 
+CLK = 0; 
+forever #5 CLK = ~CLK; 
 end 
+
+initial begin 
+S = 0; R = 0;   
+#12;            
+S = 0; R = 1;   
+#10; 
+S = 0; R = 0;   
+#10; 
+S = 1; R = 0;   
+#10; 
+S = 0; R = 0;   
+#10; 
+S = 1; R = 1;   
+#10; 
+$finish; 
+end 
+
 endmodule</pre>
 
 Schematic:
-![WhatsApp Image 2025-11-14 at 13 52 59_5929e8d3](https://github.com/user-attachments/assets/4d437f10-bb7a-45b3-bc98-d0e1fbba6b5c)
+![WhatsApp Image 2025-11-19 at 00 21 23_4f43b269](https://github.com/user-attachments/assets/b61a409f-5345-4e5f-bff3-0d41d3759b93)
 
 Simulation:
-![WhatsApp Image 2025-11-14 at 13 51 47_2b56409f](https://github.com/user-attachments/assets/3a11b556-6f04-4a43-bdb7-2770bb8e31c1)
+![WhatsApp Image 2025-11-19 at 00 17 52_d6a66df5](https://github.com/user-attachments/assets/a1960adb-c7e1-4a45-8283-f31d47558fef)
 ____________________________________________________________________________________________________________________________________
-14. D Flip Flop:
+<h4>15. D Flip Flop:</h4>
+
 <h5>Code:</h5>
-Design source file code:
-<pre>`timescale 1ns / 1ps
-module d_ff(
-    input D,clk,
-    wire D_bar,sg, rg,
-    output q, q_bar
-    );
-    assign D_bar= ~D;
-    assign #1 sg = ~(D&clk);
-    assign #1 rg = ~(D_bar&clk);
-  assign q_bar = ~(q&rg);
-  assign q = ~(q_bar&sg);
+<h5>Design source file code:</h5>
+
+<pre>`timescale 1ns / 1ps 
+
+//Positive edge triggered D Flip Flop
+
+module d_ff( 
+input  D, CLK, 
+output reg Q, 
+output Qbar 
+); 
+
+
+assign Qbar = ~Q;
+
+always @(posedge CLK) begin
+     Q <= D;
+end
+
+
 endmodule</pre>
 
-Test bench file code:
-<pre>`timescale 1ns / 1ps
-module tb_d_ff(
-    );
-    reg D,clk;
-    wire q, q_bar;
-d_ff uut (
-     .D(D),
-     .clk(clk),
-    .q(q),
-    .q_bar(q_bar)
-);
-    initial begin
-    clk=0;
-    forever #5 
-    clk = ~clk;
-    end
-    initial begin 
-    D = 0; #10;
-    D = 1; #10;
-    $finish;
+<h5>Test bench file code:</h5>
+
+<pre>`timescale 1ns / 1ps 
+
+module tb_d_ff( 
+); 
+reg  D, CLK;  
+wire Q, Qbar; 
+
+d_ff uut (D,CLK,Q,Qbar); 
+
+initial begin 
+CLK = 0; 
+forever #5 CLK = ~CLK; 
 end 
+
+initial begin 
+D = 0;  #10;            
+D = 1;  #10; 
+$finish; 
+end 
+
 endmodule</pre>
 
 Schematic:
-<img width="1004" height="419" alt="image" src="https://github.com/user-attachments/assets/0db7b1be-8f01-4135-b976-2a518a8773af" />
+![WhatsApp Image 2025-11-19 at 00 39 34_ba92f0e7](https://github.com/user-attachments/assets/af09957e-c29b-40af-bf60-23621372ae71)
 
 Simulation:
-![WhatsApp Image 2025-11-17 at 10 29 31_48d1d7c2](https://github.com/user-attachments/assets/a229e43e-92ee-44ca-8936-c08e422e36c5)
+![WhatsApp Image 2025-11-19 at 00 36 21_f83bbb05](https://github.com/user-attachments/assets/6832f0ef-cce0-408d-97a0-e45b2acaee5c)
 ________________________________________________________________________________________________________________________________________________
+<h4>16. JK Flip Flop:</h4>
+
+<h5>Code:</h5>
+<h5>Design source file code:</h5>
+
+<pre>`timescale 1ns / 1ps 
+
+//Positive edge triggered JK Flip Flop
+
+module jk_ff( 
+input  J, K, CLK, 
+output reg Q, 
+output Qbar 
+); 
 
 
+assign Qbar = ~Q;
+
+always @(posedge CLK) begin
+     case ({J, K}) 
+     2'b10: Q <= 1'b1;   // Set
+     2'b01: Q <= 1'b0;   // Reset
+     2'b00: Q <= Q;      // No change 
+     2'b11: Q <= Qbar;   // Toggle 
+endcase
+end
+
+
+endmodule</pre>
+
+<h5>Test bench file code:</h5>
+
+<pre>`timescale 1ns / 1ps 
+
+module tb_jk_ff( 
+); 
+reg J, K, CLK; 
+wire Q, Qbar; 
+
+jk_ff uut (J,K,CLK,Q,Qbar); 
+
+initial begin 
+CLK = 0; 
+forever #5 CLK = ~CLK; 
+end 
+
+initial begin  
+J = 0; K = 0;   
+#12;           
+J = 0; K = 1;   
+#10; 
+J = 0; K = 0;   
+#10; 
+J = 1; K = 0;   
+#10; 
+J = 0; K = 0;   
+#10; 
+J = 1; K = 1;   
+#10; 
+$finish; 
+end 
+
+endmodule</pre>
+
+<h5>Schematic:</h5>
+![WhatsApp Image 2025-11-19 at 00 57 47_4d73369b](https://github.com/user-attachments/assets/99c44e88-a5ef-411a-b209-b73365106a37)
+
+<h5>Simulation:</h5>
+![WhatsApp Image 2025-11-19 at 00 56 39_072380e3](https://github.com/user-attachments/assets/24734caf-f3f6-474c-87c4-e0056747d387)
+________________________________________________________________________________________________________________________________________________
+<h4>17. T Flip Flop:</h4>
+
+<h5>Code:</h5>
+<h5>Design source file code:</h5>
+
+<pre>`timescale 1ns / 1ps 
+ 
+//Positive edge triggered T Flip Flop
+
+module t_ff( 
+input  T, CLK, 
+output reg Q, 
+output Qbar 
+); 
+
+
+assign Qbar = ~Q;
+initial Q=0;
+
+always @(posedge CLK) begin
+   case ({T}) 
+     1'b1: Q <= Qbar;   // Toggle
+     1'b0: Q <= Q;   // Hold
+endcase
+end
+
+
+endmodule</pre>
+
+<h5>Test bench file code:</h5>
+
+<pre>`timescale 1ns / 1ps 
+
+module tb_t_ff( 
+); 
+reg  T, CLK;  
+wire Q, Qbar; 
+
+t_ff uut (T,CLK,Q,Qbar); 
+
+initial begin 
+CLK = 0; 
+forever #5 CLK = ~CLK; 
+end 
+
+initial begin 
+T = 0;  #10;            
+T = 1;  #10; 
+T = 0;  #10;            
+T = 1;  #10;
+$finish; 
+end 
+
+endmodule</pre>
+
+<h5>Schematic:</h5>
+![WhatsApp Image 2025-11-19 at 01 22 29_13df9004](https://github.com/user-attachments/assets/90585adf-e0c3-4791-8d12-cd4f70157859)
+
+<h5>Simulation:</h5>
+![WhatsApp Image 2025-11-19 at 01 16 17_85f0dc64](https://github.com/user-attachments/assets/99bb42ea-ccbb-4ebe-a7bb-adf147f89d14)
+________________________________________________________________________________________________________________________________________________
