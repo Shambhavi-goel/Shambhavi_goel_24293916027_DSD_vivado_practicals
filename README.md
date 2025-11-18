@@ -1,5 +1,5 @@
-<pre>SHAMBHAVI GOEL, 
-24293916027,
+<pre>SHAMBHAVI GOEL
+24293916027
 2nd year, sem-3, CSE-A</pre>
 
 <pre>The following are the practicals performed in Verilog:</pre>
