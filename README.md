@@ -55,12 +55,11 @@ end
 endmodule
 </pre>
 
-   <h5>Schematic:</h5>
-   ![WhatsApp Image 2025-11-05 at 22 16 40_15c374ae](https://github.com/user-attachments/assets/aba98752-ebae-4638-b0bb-13a74cea4ea8)
+Schematic:
+![WhatsApp Image 2025-11-05 at 22 16 40_15c374ae](https://github.com/user-attachments/assets/aba98752-ebae-4638-b0bb-13a74cea4ea8)
    
-   <h5>Simulation:</h5>
-   ![WhatsApp Image 2025-11-05 at 22 18 11_5cee90ea](https://github.com/user-attachments/assets/ca707868-399f-4338-87ce-36d6706c9b64)
-
+Simulation:
+![WhatsApp Image 2025-11-05 at 22 18 11_5cee90ea](https://github.com/user-attachments/assets/ca707868-399f-4338-87ce-36d6706c9b64)
 ________________________________________________________________________________________________________________________________________
 
 <h4>2. Boolean Expression:</h4>
@@ -110,12 +109,11 @@ end
 endmodule
 </pre>
 
-  <h5>Schematic:</h5>
-  ![WhatsApp Image 2025-11-05 at 22 33 31_a9eef5c1](https://github.com/user-attachments/assets/3cf1bb2c-076f-439b-8af7-2e4ff7ecbb57)
+Schematic:
+![WhatsApp Image 2025-11-05 at 22 33 31_a9eef5c1](https://github.com/user-attachments/assets/3cf1bb2c-076f-439b-8af7-2e4ff7ecbb57)
   
-  <h5>Simulation:</h5>
-  ![WhatsApp Image 2025-11-05 at 22 43 56_0d49f174](https://github.com/user-attachments/assets/3c0a1aba-53a2-4c84-ae47-1957a252c890)
-
+Simulation:
+![WhatsApp Image 2025-11-05 at 22 43 56_0d49f174](https://github.com/user-attachments/assets/3c0a1aba-53a2-4c84-ae47-1957a252c890)
 ________________________________________________________________________________________________________________________________________
 
 <h4>3. Mux 2x1:</h4>
@@ -153,12 +151,11 @@ I0 = 0; I1 = 0; S = 0; #10;
 endmodule
 </pre>
 
-<h5>Schematic:</h5>
+Schematic:
 ![WhatsApp Image 2025-11-06 at 10 01 23_c89adc79](https://github.com/user-attachments/assets/5f41f4fb-b5bb-4d5f-8dce-9bed78fa7ea2)
 
-<h5>Simulation:</h5>
+Simulation:
 ![WhatsApp Image 2025-11-06 at 10 03 30_af059585](https://github.com/user-attachments/assets/6c71bbe3-f640-4b2d-9b45-312eb1acedbf)
-
 ________________________________________________________________________________________________________________________________________
 
 <h4>4. Mux 4x1:</h4>
@@ -268,12 +265,13 @@ end
 endmodule
 </pre>
 
-<h5>Schematic:</h5>
+Schematic:
 <img width="894" height="482" alt="image" src="https://github.com/user-attachments/assets/b675e6eb-4cec-4e30-a3b4-bd3f9901d764" />
 
-<h5>Simulation:</h5>
+Simulation:
 <img width="911" height="503" alt="image" src="https://github.com/user-attachments/assets/807eb2dd-c018-4635-a9d2-8fd767f197ad" />
 ________________________________________________________________________________________________________________________________________
+
 <h4>5. Mux 8x1:</h4>
 
 <h5>Code:</h5>
@@ -341,14 +339,13 @@ end
 endmodule
 </pre>
 
-<h5>Schematic:</h5>
+Schematic:
 ![WhatsApp Image 2025-11-17 at 13 37 41_03d2c530](https://github.com/user-attachments/assets/24994a77-3c55-48db-92bf-b0f5633efc9c)
 
-<h5>Simulation:</h5>
+Simulation:
 ![WhatsApp Image 2025-11-17 at 13 36 02_135c6ba0](https://github.com/user-attachments/assets/f2f6f236-5114-4dab-a095-0a3a22003703)
-
-
 ________________________________________________________________________________________________________________________________________
+
 <h4>6. 4 to 2 Priority Encoder:</h4>
 
 <h5>Code:</h5>
@@ -410,13 +407,13 @@ initial
   end
 endmodule</pre>
 
-<h5>Schematic:</h5>
+Schematic:
 ![WhatsApp Image 2025-11-06 at 10 32 04_3bea99d6](https://github.com/user-attachments/assets/bfe12bcc-336a-4cae-95c2-e5d957ed1423)
 
-<h5>Simulation:</h5>
+Simulation:
 ![WhatsApp Image 2025-11-06 at 10 33 02_c3ea71df](https://github.com/user-attachments/assets/d367824f-31d4-4844-baf6-7a3857b799db)
-
 ________________________________________________________________________________________________________________________________________
+
 <h4>7. 2 to 4 Decoder:</h4>
 
 <h5>Code:</h5>
@@ -459,13 +456,12 @@ initial
   end
 endmodule</pre>
 
-  <h5>Schematic:</h5>
-  ![WhatsApp Image 2025-11-06 at 13 14 40_7676f9f0](https://github.com/user-attachments/assets/a4e7d1cb-b855-48d9-a5f8-cfb1397ca741)
+Schematic:
+![WhatsApp Image 2025-11-06 at 13 14 40_7676f9f0](https://github.com/user-attachments/assets/a4e7d1cb-b855-48d9-a5f8-cfb1397ca741)
 
-  <h5>Simulation:</h5>
-  ![WhatsApp Image 2025-11-06 at 13 16 04_632e6189](https://github.com/user-attachments/assets/a8c3744c-1a92-49db-935d-36212981c79c)
-
- ________________________________________________________________________________________________________________________________________
+Simulation:
+![WhatsApp Image 2025-11-06 at 13 16 04_632e6189](https://github.com/user-attachments/assets/a8c3744c-1a92-49db-935d-36212981c79c)
+________________________________________________________________________________________________________________________________________
 
 <h4>8. Half Adder:</h4>
      
@@ -507,10 +503,10 @@ initial
   end
 endmodule</pre>
 
-<h5>Schematic:</h5>
+Schematic:
 ![WhatsApp Image 2025-11-10 at 14 32 22_6b32000f](https://github.com/user-attachments/assets/e9ce97f3-6470-460b-9d4e-f38caee94a0b)
 
-<h5>Simulation:</h5>
+Simulation:
 ![WhatsApp Image 2025-11-10 at 14 30 24_439d5fa5](https://github.com/user-attachments/assets/88b346d5-4860-4ae3-8b92-cd08adeb90ea)
 ________________________________________________________________________________________________________________________________________
 
@@ -554,10 +550,10 @@ initial
   end
 endmodule</pre>
 
-<h5>Schematic:</h5>
+Schematic:
 ![WhatsApp Image 2025-11-10 at 14 38 46_6bb5e5a9](https://github.com/user-attachments/assets/e4705026-119a-4901-a266-b120ba020071)
 
-<h5>Simulation:</h5>
+Simulation:
 ![WhatsApp Image 2025-11-10 at 14 37 44_5ee9b7bd](https://github.com/user-attachments/assets/fd4d346f-8700-48af-80f0-54e6d4169260)
 ________________________________________________________________________________________________________________________________________
    
@@ -605,10 +601,10 @@ initial
   end
 endmodule</pre>
 
-<h5>Schematic:</h5>
+Schematic:
 ![WhatsApp Image 2025-11-10 at 14 49 01_a97ac7f9](https://github.com/user-attachments/assets/4e8241a1-a640-47d9-bc4e-fd4d56e3ce1a)
 
-<h5>Simulation:</h5>
+Simulation:
 ![WhatsApp Image 2025-11-10 at 14 48 04_845cb2b1](https://github.com/user-attachments/assets/0c4ab133-1653-4379-a29f-508e01313c53)
 _______________________________________________________________________________________________________________________________________
    
@@ -656,12 +652,13 @@ initial
   end
 endmodule</pre>
 
-<h5>Schematic:</h5>
+Schematic:
 ![WhatsApp Image 2025-11-13 at 23 12 27_7036be44](https://github.com/user-attachments/assets/5de0ae88-c19d-4417-b748-aa83bb97c204)
 
-<h5>Simulation:</h5>
+Simulation:
 ![WhatsApp Image 2025-11-13 at 23 13 47_90bdeb01](https://github.com/user-attachments/assets/bcbb20b5-049a-4201-97e4-c6361ad7e9fd)
 ________________________________________________________________________________________________________________________________________
+
 <h4>12. Universal Adder / Subtractor with Overflow Check:</h4>
 
 <h5>Code:</h5>
@@ -722,12 +719,13 @@ end
 endmodule
 </pre>
 
-<h5>Schematic:</h5>
+Schematic:
 ![WhatsApp Image 2025-11-18 at 23 01 01_68606018](https://github.com/user-attachments/assets/67e5fb1a-c9f5-4957-bf57-3e625fbfe480)
 
-<h5>Simulation:</h5>
+Simulation:
 ![WhatsApp Image 2025-11-18 at 22 59 38_9d1d4967](https://github.com/user-attachments/assets/9814d178-a66b-4111-b4ab-2434a2fd91e4)
 ________________________________________________________________________________________________________________________________________
+
 <h4>13. SR Latch:</h4>
 
 <h5>Code:</h5>
@@ -794,12 +792,13 @@ initial
 
 endmodule</pre>
 
-<h5>Schematic:</h5>
+Schematic:
 ![WhatsApp Image 2025-11-19 at 00 04 35_c0ca73f1](https://github.com/user-attachments/assets/515060f1-6b55-4c91-93cb-909382a5c466)
 
-<h5>Simulation:</h5>
+Simulation:
 ![WhatsApp Image 2025-11-19 at 00 03 12_cd90a7e0](https://github.com/user-attachments/assets/bded6930-4550-4849-95d1-8dbbaf1a8f2a)
 ________________________________________________________________________________________________________________________________________
+
 <h4>14. SR Flip Flop:</h4>
 
 <h5>Code:</h5>
@@ -870,6 +869,7 @@ Schematic:
 Simulation:
 ![WhatsApp Image 2025-11-19 at 00 17 52_d6a66df5](https://github.com/user-attachments/assets/a1960adb-c7e1-4a45-8283-f31d47558fef)
 ____________________________________________________________________________________________________________________________________
+
 <h4>15. D Flip Flop:</h4>
 
 <h5>Code:</h5>
@@ -925,6 +925,7 @@ Schematic:
 Simulation:
 ![WhatsApp Image 2025-11-19 at 00 36 21_f83bbb05](https://github.com/user-attachments/assets/6832f0ef-cce0-408d-97a0-e45b2acaee5c)
 ________________________________________________________________________________________________________________________________________________
+
 <h4>16. JK Flip Flop:</h4>
 
 <h5>Code:</h5>
@@ -989,12 +990,13 @@ end
 
 endmodule</pre>
 
-<h5>Schematic:</h5>
+Schematic:
 ![WhatsApp Image 2025-11-19 at 00 57 47_4d73369b](https://github.com/user-attachments/assets/99c44e88-a5ef-411a-b209-b73365106a37)
 
-<h5>Simulation:</h5>
+Simulation:
 ![WhatsApp Image 2025-11-19 at 00 56 39_072380e3](https://github.com/user-attachments/assets/24734caf-f3f6-474c-87c4-e0056747d387)
 ________________________________________________________________________________________________________________________________________________
+
 <h4>17. T Flip Flop:</h4>
 
 <h5>Code:</h5>
@@ -1050,9 +1052,9 @@ end
 
 endmodule</pre>
 
-<h5>Schematic:</h5>
+Schematic:
 ![WhatsApp Image 2025-11-19 at 01 22 29_13df9004](https://github.com/user-attachments/assets/90585adf-e0c3-4791-8d12-cd4f70157859)
 
-<h5>Simulation:</h5>
+Simulation:
 ![WhatsApp Image 2025-11-19 at 01 16 17_85f0dc64](https://github.com/user-attachments/assets/99bb42ea-ccbb-4ebe-a7bb-adf147f89d14)
 ________________________________________________________________________________________________________________________________________________
