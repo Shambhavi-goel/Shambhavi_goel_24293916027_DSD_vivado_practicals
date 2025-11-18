@@ -1,8 +1,8 @@
-SHAMBHAVI GOEL, 
+<pre>SHAMBHAVI GOEL, 
 24293916027,
-2nd year, sem-3, CSE-A
+2nd year, sem-3, CSE-A</pre>
 
-The following are the practicals performed in Verilog:
+<pre>The following are the practicals performed in Verilog:</pre>
 ________________________________________________________________________________________________________________________________________
 
 </h4>1. Logic Gates:</h4>
