@@ -1058,3 +1058,168 @@ Schematic:
 Simulation:
 ![WhatsApp Image 2025-11-19 at 01 16 17_85f0dc64](https://github.com/user-attachments/assets/99bb42ea-ccbb-4ebe-a7bb-adf147f89d14)
 ________________________________________________________________________________________________________________________________________________
+
+<h4>18. 0,3,5,6,0 Counter with lockout and its solution with reset pulse:</h4>
+
+<h5>Code:</h5>
+<h5>Design source file code:</h5>
+
+<pre>
+//Code for 0 -> 3 -> 5 -> 6 -> 0 counter with T Flip Flop
+
+`timescale 1ns / 1ps
+module t_ff(
+input t,
+input clk,
+input reset,
+output reg q
+    );
+    always @(posedge clk or posedge reset) begin
+    if(reset)//always at posivitive edge
+    q<=1'b0;
+    else if(t)
+    q<=~q;
+    end 
+    
+endmodule
+
+module counter_t_ff(
+input clk, reset, output [2:0]q
+    );
+    wire t0,t1,t2;
+    assign t0=~q[1];
+    assign t1=1;
+    assign t2=q[1];
+    
+    t_ff ff0(t0,clk,reset,q[0]);
+    t_ff ff1(t1,clk,reset,q[1]);
+    t_ff ff2(t2,clk,reset,q[2]);
+    
+endmodule
+
+//Code for lockout (1 -> 2 -> 4 -> 7 -> 1) with T Flip Flop
+
+/*`timescale 1ns / 1ps
+module t_ff(
+input t,
+input clk,
+input reset,
+output reg q
+    );
+    always @(posedge clk or posedge reset) begin
+    if(reset)//always at posivitive edge
+    q<=1'b1;
+    else if(t)
+    q<=~q;
+    end 
+    
+endmodule
+
+module counter_t_ff(
+input clk, reset, output [2:0]q
+    );
+    wire t0,t1,t2;
+    assign t0=(~q[1]) & (q[0] ^ q[2]);
+    assign t1=1;
+    assign t2=(q[1]) & (~(q[0] ^ q[2]));
+    
+    t_ff ff0(t0,clk,reset,q[0]);
+    t_ff ff1(t1,clk,reset,q[1]);
+    t_ff ff2(t2,clk,reset,q[2]);
+    
+endmodule
+*/
+
+//Code for lockout solution (1 -> 2 -> 4 -> 7 -> 1) with T Flip Flop and Reset pulse un it
+
+/*`timescale 1ns / 1ps
+
+module t_ff(
+    input t,
+    input clk,
+    input reset,
+    output reg q
+    );
+    always @(posedge clk or posedge reset) begin
+        if (reset)      
+            q <= 1'b0;
+        else if (t)
+            q <= ~q;
+        else
+            q <= q;
+    end
+endmodule
+
+
+module counter_t_ff(
+    input clk,
+    input reset,
+    output [2:0] q
+    );
+
+    wire t0, t1, t2;
+    wire parity, final_reset;
+    
+    assign t0 = (q[0] & q[2]) | (~q[1] & ~q[2]);
+    assign t1 = q[1] | (q[0] & q[2]) | (~q[0] & ~q[2]);
+    assign t2 = (q[0] & q[1]) | (q[2] & ~q[0]);
+
+    assign parity = q[2] ^ q[1] ^ q[0];
+
+    assign final_reset = reset | parity;
+
+    t_ff ff0 (.t(t0), .clk(clk), .reset(final_reset), .q(q[0]));
+    t_ff ff1 (.t(t1), .clk(clk), .reset(final_reset), .q(q[1]));
+    t_ff ff2 (.t(t2), .clk(clk), .reset(final_reset), .q(q[2]));
+
+endmodule
+*/
+</pre>
+
+<h5>Test bench file code:</h5>
+
+<pre>`timescale 1ns / 1ps
+module tb_counter_t_ff(
+    );
+    
+    reg clk,reset;
+    wire [2:0]q;
+    
+    counter_t_ff uut(clk,reset,q);
+    initial
+    begin
+    clk=0;
+    #5
+    forever #5 clk=~clk;
+    end
+    
+    initial 
+    begin
+    reset =1;
+    #10
+    reset=0;
+    #50
+    $finish;
+    end
+    
+endmodule
+</pre>
+
+Schematic (0 -> 3 -> 5 -> 6 -> 0 counter):
+![WhatsApp Image 2025-11-19 at 22 34 45_1b40bb84](https://github.com/user-attachments/assets/1ecbdd09-d5fd-4d9c-bcb7-60c85b218b21)
+
+Simulation (0 -> 3 -> 5 -> 6 -> 0 counter):
+![WhatsApp Image 2025-11-19 at 22 35 35_116c0cb9](https://github.com/user-attachments/assets/a1c67a2d-c382-41be-ad86-3623166ba723)
+
+Schematic (1 -> 2 -> 4 -> 7 -> 1 lockout condition):
+![WhatsApp Image 2025-11-19 at 22 39 26_233565a8](https://github.com/user-attachments/assets/4c37e4f3-77df-4ed1-a945-1bf04d66f88d)
+
+Simulation (1 -> 2 -> 4 -> 7 -> 1 lockout condition):
+![WhatsApp Image 2025-11-19 at 22 38 50_0c7cacf6](https://github.com/user-attachments/assets/b57ad032-977b-4483-8fde-9edd7bf1a8bc)
+
+Schematic (1 -> 2 -> 4 -> 7 -> 1 lockout condition solution with reset pulse):
+![WhatsApp Image 2025-11-19 at 22 31 15_70c2f703](https://github.com/user-attachments/assets/02d0f1ce-e182-4bbf-a258-c4ad80527a75)
+
+Simulation (1 -> 2 -> 4 -> 7 -> 1 lockout condition solution with reset pulse):
+![WhatsApp Image 2025-11-19 at 22 30 15_cbcb6ee3](https://github.com/user-attachments/assets/4c36e442-7bb6-464d-86e7-8156f1c661b5)
+_________________________________________________________________________________________________________________________________________________________________
